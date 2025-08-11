@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Unique Personal Space - Projects</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 scroll-smooth">
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center p-4 pt-24 md:pt-32">
+
+        <!-- Navigation - Included for consistent layout and easy navigation back -->
+        <nav class="absolute top-8 left-1/2 -translate-x-1/2 mb-12 flex flex-wrap justify-center gap-4 md:gap-8">
+            <ul class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <li><a href="index.html" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">Home</a></li>
+                <li><a href="about.html" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">About Me</a></li>
+
+                <li><a href="skills.html" class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">Skills</a></li>
+                <li><a href="contact.html" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Projects Section -->
+        <section id="projects" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-blue-500/50">
+            <h2 class="text-4xl font-bold text-blue-400 mb-6 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl transform transition-transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">All in one tool app</h3>
+                    <p class="text-gray-300 mb-4">A brief description of Project X, highlighting its key features and technologies used. This could be a web app, a design, or a research paper.</p>
+                    <a href="https://hashimkhan1222.github.io/Tools/" class="inline-block text-blue-300 hover:text-blue-500 font-medium">View Project &rarr;</a>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl transform transition-transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Creative Portfolio</h3>
+                    <p class="text-gray-300 mb-4">An exploration into [concept], showcasing my creative process and visual design skills. Utilized [tools].</p>
+                    <a href="#" class="inline-block text-blue-300 hover:text-blue-500 font-medium">View Project &rarr;</a>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl transform transition-transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Data Visualization Tool</h3>
+                    <p class="text-gray-300 mb-4">Developed an interactive tool to visualize [type] data, making complex information accessible and understandable.</p>
+                    <a href="#" class="inline-block text-blue-300 hover:text-blue-500 font-medium">View Project &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-gray-400 text-center py-8">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

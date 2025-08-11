@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashim Khan - Personal Space</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 scroll-smooth">
+
+    <!-- Canvas Background for UI/AI Network Animation -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-sm p-4 z-50 shadow-lg flex items-center justify-between">
+        <div class="text-white text-xl font-bold ml-4">Hashim Khan</div> <!-- Name on the left -->
+        <ul class="flex flex-wrap gap-4 md:gap-8 mr-4"> <!-- Links on the right -->
+            <li><a href="index.html" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Home</a></li>
+            <li><a href="about.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">About Me</a></li>
+            <li><a href="projects.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Projects</a></li>
+            <li><a href="skills.html" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Skills</a></li>
+            <li><a href="contact.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center p-4 pt-32 md:pt-40"> <!-- Increased padding-top for fixed navbar -->
+
+        <!-- Placeholder for your Photo -->
+        <div class="mb-8 mt-4 md:mt-8">
+            <img src="Hashim.jpg" alt="Your Photo" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-purple-500 shadow-xl">
+        </div>
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-bold text-purple-400 mb-4 animate-fade-in-up">
+                Hi, I'm <span class="text-white">Hashim Khan</span>.
+            </h1>
+            <!-- Added a span for the typing effect -->
+            <p class="text-xl md:text-3xl text-gray-300 animate-fade-in-up animation-delay-300" id="typing-text">
+                A curious mind <span id="dynamic-phrase"></span>
+            </p>
+        </header>
+
+        <!-- What I Do Section -->
+        <section id="what-i-do" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-blue-500/50">
+            <h2 class="text-4xl font-bold text-blue-400 mb-8 text-center">What I Do</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Web Development -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <svg class="w-16 h-16 text-blue-300 mb-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 9a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Web Development</h3>
+                    <p class="text-gray-300 text-sm">Crafting responsive and interactive web experiences from front to back.</p>
+                </div>
+                <!-- Card 2: AI & Machine Learning -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <svg class="w-16 h-16 text-green-300 mb-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0 1 1 0 002 0zm-7 0a1 1 0 10-2 0 1 1 0 002 0zm10 4a1 1 0 10-2 0 1 1 0 002 0zM12 9a1 1 0 100-2 1 1 0 000 2zM9 13a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">AI & Machine Learning</h3>
+                    <p class="text-gray-300 text-sm">Exploring intelligent systems and data-driven solutions.</p>
+                </div>
+                <!-- Card 3: UI/UX Design -->
+                <div class="bg-gray-700 rounded-lg p-6 shadow-xl flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <svg class="w-16 h-16 text-purple-300 mb-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057 .458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                    <h3 class="text-2xl font-semibold text-white mb-2">UI/UX Design</h3>
+                    <p class="text-gray-300 text-sm">Designing intuitive and engaging user interfaces for better experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Current Focus Section -->
+        <section id="current-focus" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-orange-500/50">
+            <h2 class="text-4xl font-bold text-orange-400 mb-8 text-center">My Current Focus</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-orange-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md animate-pulse-slow">Generative AI</span>
+                <span class="bg-orange-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md animate-pulse-slow animation-delay-100">Full-stack Development</span>
+                <span class="bg-orange-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md animate-pulse-slow animation-delay-200">Scalable Systems</span>
+                <span class="bg-orange-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md animate-pulse-slow animation-delay-300">Cloud Computing</span>
+                <span class="bg-orange-600 text-white px-5 py-2 rounded-full text-lg font-medium shadow-md animate-pulse-slow animation-delay-400">Data Analytics</span>
+            </div>
+        </section>
+
+        <footer class="text-gray-400 text-center py-8">
+            <p>&copy; 2024 Hashim Khan. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-toggle-button" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.336-3.111A8.85 8.85 0 012 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9a1 1 0 100-2 1 1 0 000 2zm7-2a1 1 100 2zm-3 2a1 1 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+        </button>
+
+        <div id="chat-window" class="hidden bg-gray-800 rounded-lg shadow-xl w-80 h-96 flex flex-col mt-4">
+            <div class="bg-gray-700 p-3 rounded-t-lg flex items-center justify-between">
+                <h3 class="text-white font-bold">AI Assistant</h3>
+                <button id="chat-close-button" class="text-gray-400 hover:text-white focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-3 overflow-y-auto text-sm">
+                <!-- Chat messages will appear here -->
+                <div class="flex justify-start mb-2">
+                    <div class="bg-gray-700 text-white p-2 rounded-lg max-w-[70%]">Hello! How can I help you today?</div>
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-700 flex">
+                <input type="text" id="chat-input" placeholder="Type a message..." class="flex-1 bg-gray-700 text-white rounded-lg p-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="chat-send-button" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.646-.279L10 15.341l6.173 2.532.646.279a1 1 0 001.169-1.409l-7-14z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

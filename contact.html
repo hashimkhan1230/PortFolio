@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashim Khan - Personal Space - Contact</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 scroll-smooth">
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-sm p-4 z-50 shadow-lg flex items-center justify-between">
+        <div class="text-white text-xl font-bold ml-4">Hashim Khan</div> <!-- Name on the left -->
+        <ul class="flex flex-wrap gap-4 md:gap-8 mr-4"> <!-- Links on the right -->
+            <li><a href="index.html" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Home</a></li>
+            <li><a href="about.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">About Me</a></li>
+            <li><a href="projects.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Projects</a></li>
+            <li><a href="skills.html" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Skills</a></li>
+            <li><a href="contact.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center p-4 pt-32 md:pt-40"> <!-- Increased padding-top for fixed navbar -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-red-500/50">
+            <h2 class="text-4xl font-bold text-red-400 mb-6 text-center">Get in Touch</h2>
+            <p class="text-lg leading-relaxed text-gray-200 mb-6 text-center">
+                I'm always open to new ideas, collaborations, or just a friendly chat! Feel free to reach out using the form below.
+            </p>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/yourformid" method="POST" class="flex flex-col gap-4">
+                <div>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Hashim Khan" required
+                           class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-gray-400">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required
+                           class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-gray-400">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="I'd love to connect..." required
+                              class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-gray-400"></textarea>
+                </div>
+                <button type="submit" class="bg-red-600 text-white p-3 rounded-lg hover:bg-red-700 transition-colors focus:outline-none font-semibold flex items-center justify-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.646-.279L10 15.341l6.173 2.532.646.279a1 1 0 001.169-1.409l-7-14z"></path></svg>
+                    Send Message
+                </button>
+            </form>
+
+            <div class="mt-8 text-center">
+                <p class="text-gray-300 mb-4">Or connect via:</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+                    <!-- GitHub Link (existing) -->
+                    <a href="https://github.com/your-github-profile" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.207 11.387.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.54-.914-1.314-1.159-1.314-1.159-1.076-.732.08-.718.08-.718 1.19.085 1.82 1.226 1.82 1.226 1.056 1.81 2.775 1.284 3.437.98.107-.76.426-1.284.777-1.58-2.645-.295-5.415-1.325-5.415-5.89 0-1.302.465-2.368 1.228-3.21-.12-.3-.53-1.527.11-3.176 0 0 1-.32 3.28 1.227.94-.26 1.94-.39 2.94-.39.998 0 1.998.13 2.938.39 2.275-1.547 3.275-1.227 3.275-1.227.64 1.65.23 2.876.12 3.176.765.842 1.228 1.908 1.228 3.21 0 4.577-2.774 5.59-5.426 5.88.43.37.81 1.096.81 2.22 0 1.606-.015 2.895-.015 3.284 0 .32.22.69.825.57C20.565 21.799 24 17.302 24 12c0-6.627-5.373-12-12-12z"></path></svg>
+                        GitHub
+                    </a>
+
+                    <!-- Instagram Link -->
+                    <a href="https://www.instagram.com/hashim__.17?igsh=MTFhbjh1aDJmcnlsYQ==" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.043.785.034 1.224.166 1.638.31.77.284 1.25.682 1.677 1.109s.825.907 1.109 1.677c.144.414.276.853.31 1.638.041 1.013.043 1.368.043 3.797s-.002 2.784-.043 3.797c-.034.785-.166 1.224-.31 1.638-.284.77-.682 1.25-1.109 1.677s-.907.825-1.677 1.109c-.414.144-.853.276-1.638.31-.041 1.013-.043 1.368-.043 3.797s.002 2.784.043 3.797c.034.785.166 1.224.31 1.638.284.77.682 1.25 1.109 1.677s.907.825 1.677 1.109c.414.144.853.276 1.638.31 1.013.041 1.368.043 3.797.043s2.784-.002 3.797-.043c.785-.034 1.224-.166 1.638-.31.77-.284 1.25-.682 1.677-1.109s.825-.907 1.109-1.677c.144-.414.276-.853.31-1.638.041-1.013.043-1.368.043-3.797s-.002-2.784-.043-3.797c-.034-.785-.166-1.224-.31-1.638-.284-.77-.682-1.25-1.109-1.677s-.907-.825-1.677-1.109c-.414-.144-.853-.276-.31-1.638-.041-1.013-.043-1.368-.043-3.797zM12 21.315c-5.112 0-9.278-4.166-9.278-9.278S6.888 2.722 12 2.722s9.278 4.166 9.278 9.278-4.166 9.278-9.278 9.278zM12 7.824c-2.348 0-4.263 1.915-4.263 4.263S9.652 16.35 12 16.35s4.263-1.915 4.263-4.263-1.915-4.263-4.263-4.263zm4.566-.757c.784 0 1.42.637 1.42 1.42s-.636 1.42-1.42 1.42-1.42-.637-1.42-1.42.637-1.42 1.42-1.42z" clip-rule="evenodd"></path></svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-gray-400 text-center py-8">
+            <p>&copy; 2024 Hashim Khan. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-toggle-button" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.336-3.111A8.85 8.85 0 012 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9a1 1 0 100-2 1 1 0 000 2zm7-2a1 1 100 2zm-3 2a1 1 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+        </button>
+
+        <div id="chat-window" class="hidden bg-gray-800 rounded-lg shadow-xl w-80 h-96 flex flex-col mt-4">
+            <div class="bg-gray-700 p-3 rounded-t-lg flex items-center justify-between">
+                <h3 class="text-white font-bold">AI Assistant</h3>
+                <button id="chat-close-button" class="text-gray-400 hover:text-white focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-3 overflow-y-auto text-sm">
+                <!-- Chat messages will appear here -->
+                <div class="flex justify-start mb-2">
+                    <div class="bg-gray-700 text-white p-2 rounded-lg max-w-[70%]">Hello! How can I help you today?</div>
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-700 flex">
+                <input type="text" id="chat-input" placeholder="Type a message..." class="flex-1 bg-gray-700 text-white rounded-lg p-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="chat-send-button" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.646-.279L10 15.341l6.173 2.532.646.279a1 1 0 001.169-1.409l-7-14z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

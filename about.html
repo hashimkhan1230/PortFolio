@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashim Khan - Personal Space - About</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 scroll-smooth">
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-sm p-4 z-50 shadow-lg flex items-center justify-between">
+        <div class="text-white text-xl font-bold ml-4">Hashim Khan</div> <!-- Name on the left -->
+        <ul class="flex flex-wrap gap-4 md:gap-8 mr-4"> <!-- Links on the right -->
+            <li><a href="index.html" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Home</a></li>
+            <li><a href="about.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">About Me</a></li>
+            <li><a href="projects.html" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Projects</a></li>
+            <li><a href="skills.html" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Skills</a></li>
+            <li><a href="contact.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-transform transform hover:scale-105 duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center p-4 pt-32 md:pt-40"> <!-- Increased padding-top for fixed navbar -->
+
+        <!-- About Me Section -->
+        <section id="about" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-purple-500/50">
+            <h2 class="text-4xl font-bold text-purple-400 mb-6 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-32 h-32 md:w-48 md:h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl">
+                    <!-- Placeholder for your profile picture -->
+                    <img src="Hashim.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-grow text-lg leading-relaxed text-gray-200 text-center md:text-left">
+                    <p class="mb-4">
+                        Welcome to my personal corner of the internet! I'm **Hashim Khan**, a passionate and driven **2nd-year Computer Science student** currently pursuing my degree at **Jamia Millia Islamia (JMI)**. My journey into the world of technology began with a deep curiosity about how things work, evolving into a passion for creating impactful digital experiences.
+                    </p>
+                    <p class="mb-4">
+                        At JMI, I'm immersed in learning the fundamentals of computer science, from algorithms and data structures to software development methodologies. I'm constantly exploring new technologies and creative avenues, focusing on areas like web development, artificial intelligence, and UI/UX design.
+                    </p>
+                    <p>
+                        This space serves as a dynamic canvas where I share my ongoing learning journey, personal projects, and the insights I gather along the way. I believe in continuous self-improvement and leveraging innovation to build solutions that make a difference. Join me as I navigate the exciting landscape of tech!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Journey / Timeline Section -->
+        <section id="my-journey" class="w-full max-w-4xl bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 mb-12 shadow-2xl transition-all duration-500 hover:shadow-green-500/50">
+            <h2 class="text-4xl font-bold text-green-400 mb-8 text-center">My Journey</h2>
+
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <!-- Vertical Line (Timeline connector) -->
+                <div class="border-2-2 absolute border-opacity-20 border-purple-500 h-full border left-1/2 -translate-x-1/2"></div>
+
+                <!-- Milestone 1: Beginning of Tech Interest -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">💡</h1>
+                    </div>
+                    <div class="order-1 bg-gray-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="mb-3 font-bold text-purple-300 text-xl">First Spark</h3>
+                        <p class="text-sm leading-snug text-gray-300">Discovered a fascination with how software and websites work, igniting a passion for computer science.</p>
+                        <span class="text-xs text-gray-500 mt-2 block">Early Days</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: Enrolled in JMI CS -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">🎓</h1>
+                    </div>
+                    <div class="order-1 bg-gray-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="mb-3 font-bold text-purple-300 text-xl">Joining JMI</h3>
+                        <p class="text-sm leading-snug text-gray-300">Began my journey as a Computer Science student at Jamia Millia Islamia, diving deep into foundational concepts.</p>
+                        <span class="text-xs text-gray-500 mt-2 block">Year 1</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: Deep Dive into Web Dev -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">💻</h1>
+                    </div>
+                    <div class="order-1 bg-gray-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="mb-3 font-bold text-purple-300 text-xl">Web Development Focus</h3>
+                        <p class="text-sm leading-snug text-gray-300">Dedicated time to mastering front-end and back-end web technologies, building my first interactive projects.</p>
+                        <span class="text-xs text-gray-500 mt-2 block">Year 2</span>
+                    </div>
+                </div>
+
+                 <!-- Milestone 4: Exploring AI/ML (Current Phase) -->
+                 <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">🧠</h1>
+                    </div>
+                    <div class="order-1 bg-gray-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="mb-3 font-bold text-purple-300 text-xl">AI & Future Tech</h3>
+                        <p class="text-sm leading-snug text-gray-300">Currently exploring Artificial Intelligence and Machine Learning, focusing on their practical applications.</p>
+                        <span class="text-xs text-gray-500 mt-2 block">Current</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <footer class="text-gray-400 text-center py-8">
+            <p>&copy; 2024 Hashim Khan. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-toggle-button" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.336-3.111A8.85 8.85 0 012 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9a1 1 0 100-2 1 1 0 000 2zm7-2a1 1 100 2zm-3 2a1 1 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+        </button>
+
+        <div id="chat-window" class="hidden bg-gray-800 rounded-lg shadow-xl w-80 h-96 flex flex-col mt-4">
+            <div class="bg-gray-700 p-3 rounded-t-lg flex items-center justify-between">
+                <h3 class="text-white font-bold">AI Assistant</h3>
+                <button id="chat-close-button" class="text-gray-400 hover:text-white focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-3 overflow-y-auto text-sm">
+                <!-- Chat messages will appear here -->
+                <div class="flex justify-start mb-2">
+                    <div class="bg-gray-700 text-white p-2 rounded-lg max-w-[70%]">Hello! How can I help you today?</div>
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-700 flex">
+                <input type="text" id="chat-input" placeholder="Type a message..." class="flex-1 bg-gray-700 text-white rounded-lg p-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="chat-send-button" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.646-.279L10 15.341l6.173 2.532.646.279a1 1 0 001.169-1.409l-7-14z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
